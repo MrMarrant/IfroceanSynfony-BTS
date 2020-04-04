@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Etudes{% endblock %}
+
+{% block body %}
+<h1>Liste des Etudes</h1>
+   <table class="table">
+   <thead>
+   <tr>
+
+    <th>IdEtude</th>
+    <th>Titre de L'étude</th>
+
+    
+
+   </tr>
+   </thead>
+<tbody>
+{% for etude in etudes %}
+
+    <tr>
+     <td>{{ etude.idetude }}</td>
+    <td>{{ etude.titreetude }}</td>
+
+     </tr>
+     <td>
+    <a href={{ path("etude_has_plage",{"id":etude.idetude}) }}
+    class="btn btn-primary"> 
+    Plage en liens avec L'étude</a>
+
+    </td>
+    <td>
+    
+{% endfor %}
+
+</tbody>
+</table>
+
+{% endblock %}

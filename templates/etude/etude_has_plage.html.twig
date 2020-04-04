@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Etudes{% endblock %}
+
+{% block body %}
+<h1>Liste des Etudes</h1>
+   <table class="table">
+   <thead>
+   <tr>
+
+    <th>IdEtude</th>
+    <th>IdPlage</th>
+    <th>Nom de la Plage</th>
+
+    
+
+   </tr>
+   </thead>
+<tbody>
+{% set foo = 0 %}
+{% for etude_has_plage in etude_has_plages %}
+   {% if  foo != etude_has_plage.idplage %}
+      <tr>
+      <td>{{ etude_has_plage.idetude }}</td>
+      <td>{{ etude_has_plage.idplage }}</td>
+      {% set foo = etude_has_plage.idplage %}
+      
+      {% for plage in plages %}
+
+         {% if plage.idplage == etude_has_plage.idplage %}
+            <td>{{ plage.nomplage }}</td>
+         {% endif %}
+         
+      {% endfor %}
+
+      </tr>
+      {% endif %}   
+{% endfor %}
+
+
+
+</tbody>
+</table>
+
+{% endblock %}
