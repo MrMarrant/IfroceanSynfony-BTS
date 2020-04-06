@@ -5,35 +5,70 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Personne
- *
- * @ORM\Table(name="personne")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\PersonneRepository")
  */
 class Personne
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="idPersonne", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
      */
-    private $idpersonne;
+    private $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="nomPersonne", type="string", length=255, nullable=false)
+     * @ORM\Column(type="string", length=255)
      */
-    private $nompersonne;
+    private $nomPersonne;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="motdePasse", type="string", length=255, nullable=false)
+     * @ORM\Column(type="string", length=255)
      */
     private $motdepasse;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $idMetier;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getNomPersonne(): ?string
+    {
+        return $this->nomPersonne;
+    }
+
+    public function setNomPersonne(string $nomPersonne): self
+    {
+        $this->nomPersonne = $nomPersonne;
+
+        return $this;
+    }
+
+    public function getMotdepasse(): ?string
+    {
+        return $this->motdepasse;
+    }
+
+    public function setMotdepasse(string $motdepasse): self
+    {
+        $this->motdepasse = $motdepasse;
+
+        return $this;
+    }
+
+    public function getIdMetier(): ?int
+    {
+        return $this->idMetier;
+    }
+
+    public function setIdMetier(int $idMetier): self
+    {
+        $this->idMetier = $idMetier;
+
+        return $this;
+    }
 }

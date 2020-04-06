@@ -28,5 +28,22 @@ class Commune
      */
     private $nomcommune;
 
+    public function getIdcommune(): ?int
+    {
+        return $this->idcommune;
+    }
+
+    public function getNomcommune(): ?string
+    {
+        return $this->nomcommune;
+    }
+
+    public function setNomcommune(string $nomcommune): self
+    {
+        $this->nomcommune = $nomcommune;
+
+        return $this;
+    }
+
 
 }

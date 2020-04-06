@@ -42,23 +42,48 @@ class Etude
      */
     private $totalpersonneetude;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="idPlage", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
-     */
-    private $idplage;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="Plage_Lieu_id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
-     */
-    private $plageLieuId;
+    public function getIdetude(): ?int
+    {
+        return $this->idetude;
+    }
+
+    public function getTitreetude(): ?string
+    {
+        return $this->titreetude;
+    }
+
+    public function setTitreetude(?string $titreetude): self
+    {
+        $this->titreetude = $titreetude;
+
+        return $this;
+    }
+
+    public function getDateetude(): ?\DateTimeInterface
+    {
+        return $this->dateetude;
+    }
+
+    public function setDateetude(?\DateTimeInterface $dateetude): self
+    {
+        $this->dateetude = $dateetude;
+
+        return $this;
+    }
+
+    public function getTotalpersonneetude(): ?string
+    {
+        return $this->totalpersonneetude;
+    }
+
+    public function setTotalpersonneetude(string $totalpersonneetude): self
+    {
+        $this->totalpersonneetude = $totalpersonneetude;
+
+        return $this;
+    }
+
 
 
 }

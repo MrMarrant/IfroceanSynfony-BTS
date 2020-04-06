@@ -37,5 +37,27 @@ class PlageHasEspece
      */
     private $nombreespece;
 
+    public function getIdplage(): ?int
+    {
+        return $this->idplage;
+    }
+
+    public function getIdespece(): ?int
+    {
+        return $this->idespece;
+    }
+
+    public function getNombreespece(): ?int
+    {
+        return $this->nombreespece;
+    }
+
+    public function setNombreespece(int $nombreespece): self
+    {
+        $this->nombreespece = $nombreespece;
+
+        return $this;
+    }
+
 
 }

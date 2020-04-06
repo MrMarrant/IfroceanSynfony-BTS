@@ -63,5 +63,82 @@ class PlageHasEtude
      */
     private $angle4;
 
+    public function getIdplage(): ?int
+    {
+        return $this->idplage;
+    }
+
+    public function setIdplage(int $idplage): self
+    {
+        $this->idplage = $idplage;
+
+        return $this;
+    }
+
+    public function getIdetude(): ?int
+    {
+        return $this->idetude;
+    }
+
+    public function setIdetude(int $idetude): self
+    {
+        $this->idetude = $idetude;
+
+        return $this;
+    }
+
+    public function getIdzone(): ?int
+    {
+        return $this->idzone;
+    }
+
+    public function getAngle1(): ?int
+    {
+        return $this->angle1;
+    }
+
+    public function setAngle1(?int $angle1): self
+    {
+        $this->angle1 = $angle1;
+
+        return $this;
+    }
+
+    public function getAngle2(): ?int
+    {
+        return $this->angle2;
+    }
+
+    public function setAngle2(?int $angle2): self
+    {
+        $this->angle2 = $angle2;
+
+        return $this;
+    }
+
+    public function getAngle3(): ?int
+    {
+        return $this->angle3;
+    }
+
+    public function setAngle3(?int $angle3): self
+    {
+        $this->angle3 = $angle3;
+
+        return $this;
+    }
+
+    public function getAngle4(): ?int
+    {
+        return $this->angle4;
+    }
+
+    public function setAngle4(?int $angle4): self
+    {
+        $this->angle4 = $angle4;
+
+        return $this;
+    }
+
 
 }

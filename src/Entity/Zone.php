@@ -28,5 +28,22 @@ class Zone
      */
     private $nomzone;
 
+    public function getIdzone(): ?int
+    {
+        return $this->idzone;
+    }
+
+    public function getNomzone(): ?string
+    {
+        return $this->nomzone;
+    }
+
+    public function setNomzone(string $nomzone): self
+    {
+        $this->nomzone = $nomzone;
+
+        return $this;
+    }
+
 
 }

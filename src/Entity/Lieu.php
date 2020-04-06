@@ -35,5 +35,34 @@ class Lieu
      */
     private $idcommune;
 
+    public function getIdlieu(): ?int
+    {
+        return $this->idlieu;
+    }
+
+    public function getNomdepartement(): ?string
+    {
+        return $this->nomdepartement;
+    }
+
+    public function setNomdepartement(string $nomdepartement): self
+    {
+        $this->nomdepartement = $nomdepartement;
+
+        return $this;
+    }
+
+    public function getIdcommune(): ?int
+    {
+        return $this->idcommune;
+    }
+
+    public function setIdcommune(int $idcommune): self
+    {
+        $this->idcommune = $idcommune;
+
+        return $this;
+    }
+
 
 }

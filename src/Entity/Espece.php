@@ -35,5 +35,34 @@ class Espece
      */
     private $nombretotale;
 
+    public function getIdespece(): ?int
+    {
+        return $this->idespece;
+    }
+
+    public function getNomespece(): ?string
+    {
+        return $this->nomespece;
+    }
+
+    public function setNomespece(string $nomespece): self
+    {
+        $this->nomespece = $nomespece;
+
+        return $this;
+    }
+
+    public function getNombretotale(): ?int
+    {
+        return $this->nombretotale;
+    }
+
+    public function setNombretotale(int $nombretotale): self
+    {
+        $this->nombretotale = $nombretotale;
+
+        return $this;
+    }
+
 
 }

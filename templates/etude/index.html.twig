@@ -4,21 +4,35 @@
 
 {% block body %}
 <h1>Liste des Etudes</h1>
-   <table class="table">
+   {# <table class="table">
    <thead>
    <tr>
 
-    <th>IdEtude</th>
-    <th>Titre de L'étude</th>
+
+     <th>IdEtude</th>
+    <th>Titre de L'étude</th> 
 
     
 
    </tr>
-   </thead>
+   </thead> #}
 <tbody>
 {% for etude in etudes %}
 
-    <tr>
+<div class="card">
+  <div class="card-header">
+    {{ etude.titreetude }}
+  </div>
+  <div class="card-body">
+    {# <h5 class="card-title">{{ etude.titreetude }}</h5> #}
+    <p class="card-text">Id De l'étude à virer un jour : {{ etude.idetude }}</p>
+    <a href={{ path("etude_has_plage",{"id":etude.idetude}) }} class="btn btn-success">Plage en liens avec L'étude</a>
+  </div>
+</div>
+
+<br>
+
+    {# <tr>
      <td>{{ etude.idetude }}</td>
     <td>{{ etude.titreetude }}</td>
 
@@ -29,11 +43,13 @@
     Plage en liens avec L'étude</a>
 
     </td>
-    <td>
+    <td> #}
     
 {% endfor %}
 
 </tbody>
 </table>
+
+
 
 {% endblock %}

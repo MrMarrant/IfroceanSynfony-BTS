@@ -28,5 +28,22 @@ class Metier
      */
     private $nommetier;
 
+    public function getIdmetier(): ?int
+    {
+        return $this->idmetier;
+    }
+
+    public function getNommetier(): ?string
+    {
+        return $this->nommetier;
+    }
+
+    public function setNommetier(string $nommetier): self
+    {
+        $this->nommetier = $nommetier;
+
+        return $this;
+    }
+
 
 }

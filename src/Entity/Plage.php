@@ -65,5 +65,75 @@ class Plage
      */
     private $idlieu;
 
+    public function getIdplage(): ?int
+    {
+        return $this->idplage;
+    }
+
+    public function getNomplage(): ?string
+    {
+        return $this->nomplage;
+    }
+
+    public function setNomplage(string $nomplage): self
+    {
+        $this->nomplage = $nomplage;
+
+        return $this;
+    }
+
+    public function getSuperficietotaleplage(): ?string
+    {
+        return $this->superficietotaleplage;
+    }
+
+    public function setSuperficietotaleplage(?string $superficietotaleplage): self
+    {
+        $this->superficietotaleplage = $superficietotaleplage;
+
+        return $this;
+    }
+
+    public function getNombredespeceplage(): ?int
+    {
+        return $this->nombredespeceplage;
+    }
+
+    public function setNombredespeceplage(?int $nombredespeceplage): self
+    {
+        $this->nombredespeceplage = $nombredespeceplage;
+
+        return $this;
+    }
+
+    public function getPopulationtotaledespeceplage(): ?int
+    {
+        return $this->populationtotaledespeceplage;
+    }
+
+    public function setPopulationtotaledespeceplage(?int $populationtotaledespeceplage): self
+    {
+        $this->populationtotaledespeceplage = $populationtotaledespeceplage;
+
+        return $this;
+    }
+
+    public function getDensiteespeceplage(): ?int
+    {
+        return $this->densiteespeceplage;
+    }
+
+    public function setDensiteespeceplage(?int $densiteespeceplage): self
+    {
+        $this->densiteespeceplage = $densiteespeceplage;
+
+        return $this;
+    }
+
+    public function getIdlieu(): ?int
+    {
+        return $this->idlieu;
+    }
+
 
 }

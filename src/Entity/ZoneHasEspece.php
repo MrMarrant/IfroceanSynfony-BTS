@@ -37,5 +37,27 @@ class ZoneHasEspece
      */
     private $nombreespece;
 
+    public function getIdzone(): ?int
+    {
+        return $this->idzone;
+    }
+
+    public function getIdespece(): ?int
+    {
+        return $this->idespece;
+    }
+
+    public function getNombreespece(): ?int
+    {
+        return $this->nombreespece;
+    }
+
+    public function setNombreespece(int $nombreespece): self
+    {
+        $this->nombreespece = $nombreespece;
+
+        return $this;
+    }
+
 
 }
