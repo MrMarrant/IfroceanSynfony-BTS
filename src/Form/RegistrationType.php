@@ -14,9 +14,9 @@ class RegistrationType extends AbstractType
     {
         $builder
             ->add('nompersonne')
-            ->add('motdepasse')
+            ->add('motdepasse', PasswordType::class, array('label' => 'Password'))
             ->add('idMetier')
-          //  ->add('confirm_password')
+            ->add('confirm_password', PasswordType::class, array('label' => 'Password'))
         ;
     }
 
